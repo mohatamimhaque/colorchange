@@ -1,12 +1,19 @@
 var parent = document.querySelector('.parent_class');
 var content ='';
 for (let i = 1; i <17 ; i++) {
- content += "<div class='child wh' data-id='0' data-check='no'>2</div>";
+ content += "<div class='child wh' data-id='0' data-check='no'></div>";
 }
 parent.innerHTML = content;
 
 
 
+function start(){
+    setTimeout(function() {
+        var dd = document.querySelectorAll('.child');
+        for (d = 0; d < dd.length; d++) {
+        dd[d].classList.remove('animate');
+
+    }},1000)}
 
 var child = document.querySelectorAll('.child');
 for (i = 0; i < child.length; i++) {
@@ -22,7 +29,6 @@ for (i = 0; i < child.length; i++) {
       
         var l = Math.max(...arr);
         if (target_id == 'no'){
-        
             if (l < 16){
                 var k = l+1;
                 target.innerHTML = k;
@@ -47,8 +53,26 @@ for (i = 0; i < child.length; i++) {
                 }
             }
         }
+        else{
+            target.classList.add('animate');
+            start();
+        }
     })
    }
 
 
 
+//    function clockInit(){
+//     var hour = document.getElementById('hour');
+//     var minute = document.getElementById('minute');
+//     var second = document.getElementById('second');
+ 
+//     var d = new Date();
+//     var hh = d.getHours() * 30;
+//     var mm = d.getMinutes() * 6;
+//     var ss = d.getSeconds() * 6;
+ 
+//     hour.style.transform =`rotatez(${hh+(mm/12)}deg)`; 
+//     minute.style.transform =`rotatez(${mm}deg)`; 
+//     second.style.transform =`rotatez(${ss}deg)`; 
+//    }

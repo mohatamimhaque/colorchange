@@ -95,7 +95,7 @@ body{
 .child.wh{
     box-shadow:  14px 14px 20px #bebebe,
              -14px -14px 20px #ffffff;
-;
+
 }
 .child.col1{
     background-color: #BCCFE0;
@@ -110,4 +110,27 @@ body{
              -14px -14px 35px #ffffff;
     color:rgb(254, 254, 65)
 
+}
+.child.animate{
+    animation-name: rotate;
+	animation-duration: 0.2s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+    color: #BCCFE0;
+}
+@keyframes rotate{
+	0% {
+        background-color: red;
+
+	}
+
+	50% {
+        background-color: rgb(234, 202, 202);
+        
+	}
+
+	100% {
+        background-color: red;
+        
+	}
 }
