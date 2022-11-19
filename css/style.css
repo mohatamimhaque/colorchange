@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+
+  }
+
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-bg);
+  border-radius: 10px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color:#e6e6fa;
+    overflow: hidden;
+    
+}
+
+
+.aps-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:80%;
+    width: 80%;
+}
+#bg-gradient{
+    position: absolute;
+    width:92%;
+    height:92%;
+    background-image: linear-gradient(45deg,#fff0f5,#f8f8ff,#e0ffff,#f0fff0,#e6e6fa );
+}
+#wrapper{
+    position: relative;
+    background: rgba(255,255,255,0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width:100%;
+    box-shadow:0 25px 25px rgba(0,0,0,0.1);
+    border:1px solid rgba(255,255,255,0.25);
+    border-right:1px solid rgba(255,255,255,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    font-size: 15px;
+    font-weight: 500;
+    padding:40px;
+    overflow-x: scroll;
+    z-index: 50;
+   
+}
+@media only screen and (max-width: 600px) {
+ .aps-wrapper{
+      width:90%
+  }
+}
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+  height:6px
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-bg);
+  border-radius: 10px;
+}
+.parent_class{
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-auto-rows: 200px;
+    grid-gap: 20px;
+    overflow-x: scroll;
+}
+.child{
+        cursor: pointer;
+        font-size: 32px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.child.wh{
+    box-shadow:  14px 14px 20px #bebebe,
+             -14px -14px 20px #ffffff;
+;
+}
+.child.col1{
+    background-color: #BCCFE0;
+    box-shadow:  14px 14px 51px #bebebe,
+             -14px -14px 51px #ffffff;
+    color: rgb(255, 45, 45);
+
+}
+.child.col2{
+    background-color: #FFB310;
+    box-shadow:  14px 14px 35px #bebebe,
+             -14px -14px 35px #ffffff;
+    color:rgb(254, 254, 65)
+
+}
